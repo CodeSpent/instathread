@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  padding: 1em;
+  text-align: center;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  font-size: 1.25em;
+  border-radius: 8px;
+`;
+
+const Button = styled.button`
+  border: none;
+`;
+
+const Row = styled.div`
+  display: flex;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer className="App">
+      <div>
+        <h1>🧵 InstaThread</h1>
+        <h2>Unroll threaded Tweets into a digestible reader.</h2>
+      </div>
+      <form name="tweet">
+        <Row>
+          <Input type="text" placeholder="🧵 Paste a threaded tweet.." />
+        </Row>
+      </form>
+    </AppContainer>
   );
 }
 
