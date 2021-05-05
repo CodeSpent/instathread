@@ -29,6 +29,7 @@ function App() {
       <form name="tweet">
         <Row>
           <Input type="text" placeholder="🧵 Paste a threaded tweet.." />
+          <Button>Unroll</Button>
         </Row>
       </form>
     </AppContainer>
